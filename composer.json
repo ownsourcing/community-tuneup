@@ -1,0 +1,14 @@
+{
+  "name": "drupal/community_tuneup",
+  "type": "drupal-module",
+  "description": "Request users enter a real name when creating an account.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/community_tuneup",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/community_tuneup",
+    "source": "http://cgit.drupalcode.org/community_tuneup"
+  },
+  "require": { }
+}

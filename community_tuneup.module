@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains .module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function community_tuneup_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the  module.
+    case 'help.page.':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Request users enter a real name when creating an account.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter() on behalf of .module.
+ */
+function community_tuneup_form_user_register_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $form['account']['name']['#title'] = t('Name <i>(as you would introduce yourself to colleagues)</i>');
+  $form['account']['name']['#description'] = t('First and last name, or your typical alternative to your first name. Example: Johnny Doe');
+  $form['account']['name']['#weight'] = -15;
+        // $this->messenger->addWarning('form_test_form_alter() executed.');
+}

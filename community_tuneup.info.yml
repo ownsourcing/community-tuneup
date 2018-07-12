@@ -1,0 +1,5 @@
+name: 'Community Tune-up'
+type: module
+description: 'Request users enter a real name when creating an account.'
+core: 8.x
+package: 'Community'
